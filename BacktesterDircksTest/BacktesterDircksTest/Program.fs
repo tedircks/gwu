@@ -1,61 +1,32 @@
-﻿type OrderSide =
-    | Buy
-    | Sell
-type OrderType =
-    | Market
-    | Limit
+﻿open System
+open System.Data
+open System.Linq
+open Microsoft.FSharp.Data
+open Microsoft.FSharp.Linq
+open FSharp.Data
+//open System.Data.Entity  
+//open Microsoft.FSharp.Data.TypeProviders  
 
-type Order(s: OrderSide, t: OrderType, p: float) =
-    let mutable S = s
-    member this.T = t
-    member this.P = p
-    member this.Side
-        with get() = S
-        and set(s) = S <- s
-
-    member this.toggleOrderSide() =
-        match S with
-        | Buy -> S <- Sell
-        | Sell -> S <- Buy
+//#r "System.Data.Entity.dll"  
+//#r "FSharp.Data.TypeProviders.dll"  
+//#r "System.Data.Linq.dll"  
 
 
-let temp = new Order(Buy, Limit, 10.0)
-printfn(temp.S)
-temp.toggleOrderSide()
-printfn(temp.S)
+[<Literal>]
+let connectionString = 
+    @"Data Source=laptop-8lhpnalu\sqlexpress;Initial Catalog=BackTesterDB;Integrated Security=True"
+/// Copied from properties of database
+//Source=(localdb)\Projects;Initial Catalog=TradingSystem;
+//Integrated Security=True;
+//Connect Timeout=30;Encrypt=False;TrustServerCertificate=False",
+//Pluralize = true>
 
-//type CounterMessage = 
-//  | Update of float
-//  | Reset
+do
+    use cmd = new SqlCommandProvider<"
+        INSERT INTO LogTable (LogDate, LogLevel, LogMessage)
+        VALUES (GETDATE(), 'test', 'test')
+        " , connectionString>(connectionString)
 
-//module Helpers =
-//    let genRandomNumber (n) =
-//        let rnd = new System.Random()
-//        float (rnd.Next(n, 100))
+    cmd.Execute() |> printfn "%A"
 
-//let inbox = MailboxProcessor.Start(fun agent -> 
-//    // Function that implements the body of the agent
-//    printfn "dircks test"
-//    let rec loop sum count = async {
-//      // Asynchronously wait for the next message
-//      let! msg = agent.Receive()
-//      match msg with
-//      | Reset -> 
-//          // Restart loop with initial values
-//          return! loop 0.0 0.0
-     
-//      | Update value -> 
-//          // Update the state and print the statistics
-//          let sum, count = sum + value, count + 1.0
-//          printfn "Average: %f" (sum / count)
-     
-//          // Wait before handling the next message
-//          do! Async.Sleep(1000)
-//          return! loop sum count
-//    }     
-//    // Start the body with initial values
-//    loop 0.0 0.0
-//)
 
-//let random = Helpers.genRandomNumber 5
-//inbox.Post(Update random)
