@@ -19,7 +19,7 @@ type Order(s: OrderSide, t: OrderType, p: float) =
         | Sell -> S <- Buy
 
 
-let temp = Order(Buy, Limit, 10.0)
+let temp = new Order(Buy, Limit, 10.0)
 printfn(temp.S)
 temp.toggleOrderSide()
 printfn(temp.S)
