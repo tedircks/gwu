@@ -1,8 +1,8 @@
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\bin\Debug\netcoreapp3.0\BackTester.Data.deps.json
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\bin\Debug\netcoreapp3.0\BackTester.Data.dll
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\bin\Debug\netcoreapp3.0\BackTester.Data.pdb
-C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.fsprojAssemblyReference.cache
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.AssemblyInfoInputs.cache
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.AssemblyInfo.fs
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.dll
 C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.pdb
+C:\Users\voris\source\repos\BacktesterDircksTest\BackTester.Data\obj\Debug\netcoreapp3.0\BackTester.Data.fsprojAssemblyReference.cache
