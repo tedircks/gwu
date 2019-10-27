@@ -1,0 +1,11 @@
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.exe
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.deps.json
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.runtimeconfig.json
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.runtimeconfig.dev.json
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.dll
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\bin\Debug\netcoreapp3.0\DircksTestBench.pdb
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\obj\Debug\netcoreapp3.0\DircksTestBench.csprojAssemblyReference.cache
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\obj\Debug\netcoreapp3.0\DircksTestBench.AssemblyInfoInputs.cache
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\obj\Debug\netcoreapp3.0\DircksTestBench.AssemblyInfo.cs
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\obj\Debug\netcoreapp3.0\DircksTestBench.dll
+C:\Users\voris\source\repos\DircksTestBench\DircksTestBench\obj\Debug\netcoreapp3.0\DircksTestBench.pdb
