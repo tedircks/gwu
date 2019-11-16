@@ -3,7 +3,7 @@
 module API = 
 
     // base url to build off of because the query for stock data and moving average data are different
-    let BASE_API_URL = Printf.StringFormat<string->string>(@"https://www.alphavantage.co/query?%s&outputsize=full&apikey=ME9K8QA8OQ9FH5HD")
+    let BASE_API_URL = Printf.StringFormat<string->string>(@"https://www.alphavantage.co/query?%s&outputsize=full&apikey=")
 
     open System // need for access to datetime
     open FSharp.Data // helpers for json parsing
