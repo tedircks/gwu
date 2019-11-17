@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="XPlot.Plotly" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BackTester.Shared\BackTester.Shared.fsproj" />
+    <ProjectReference Include="..\BackTester.Trader\BackTester.Trader.fsproj" />
+    <ProjectReference Include="..\BackTester.ZAPI\BackTester.ZAPI.fsproj" />
+  </ItemGroup>
+
+</Project>
