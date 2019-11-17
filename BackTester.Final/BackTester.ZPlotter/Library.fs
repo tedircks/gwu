@@ -117,6 +117,6 @@ module Plotter =
         } 
         |> Chart.Plot 
         |> Chart.Show
-
+       
     // entrance into the module, will be called from the script that runs the application
     let inline Plot results = Unchecked.defaultof<PlotType> $ results

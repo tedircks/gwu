@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Runner.fsx" />
     <Compile Include="Library.fs" />
   </ItemGroup>
+
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="XPlot.Plotly" Version="3.0.1" />

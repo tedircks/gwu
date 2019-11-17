@@ -108,4 +108,3 @@ module API =
     let GetTrend ticker trendType = 
         GetTrendAsync ticker trendType 
         |> Async.RunSynchronously
-
