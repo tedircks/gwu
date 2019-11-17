@@ -22,7 +22,7 @@ module API =
                 match seq with
                     | JsonValue.Record tickers -> tickers
                     | _ -> failwith "ParseJsonError -- Invalid ticker in json pull"
-        | _ -> failwith "ParseJsonError -- Unable to fit json into JsonRecord options"
+        | _ -> failwith "ParseJsonError -- Too many concurrent requests"
 
     // parser for trend model, uses top level parser
     let ParseTrendFromJson (date, json) : TrendDataElement = 
@@ -60,7 +60,6 @@ module API =
            match queryType with
             | MOVING_AVERAGE_QUERY (ticker, period) -> sprintf "function=SMA&symbol=%s&interval=daily&time_period=%d&series_type=close" ticker period 
             | STOCK_DATA_QUERY ticker -> sprintf "function=TIME_SERIES_DAILY&symbol=%s" ticker
-            | _ -> failwith "BuilApidUrl failure"
         sprintf BASE_API_URL urlToAppend
 
     // function that actually makes the api call

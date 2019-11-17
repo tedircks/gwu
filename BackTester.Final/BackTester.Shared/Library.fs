@@ -1,5 +1,20 @@
 ﻿namespace BackTester.Shared
+
 open System
+open System.Collections.Generic
+
+type TradeData = {
+    TradeTime : DateTime
+    Ticker : string
+    NumShares : int
+    Price : float
+}
+
+type Result = {
+    Holdings : Dictionary<string, int * float>
+    TradeList : TradeData list
+    PL : float
+}
 
 // base level models
 type PriceAction = | Open | High | Low | Close
@@ -32,3 +47,17 @@ type Stock = {
 
 // ED : most likely the driver of json parsing
 type StockMarketData = | Stock of Stock | Trend of Trend
+
+type IResult = 
+    abstract member GetTime : diff:int -> DateTime
+    abstract member GetStock : ticker:string * diff:int -> StockData option
+    abstract member GetOpenPrice : ticker:string * diff:int -> float option
+    abstract member GetCurrentPosition : ticker:string -> (int * float) option
+    abstract member ExecuteTrade : ticker:string * shares:int -> bool
+    abstract member GetTrend : id:string * diff:int -> float option
+    abstract member GetClosePrice : ticker:string * diff:int -> float option
+
+type Options = {
+    Strategy : IResult -> unit
+    MarketData : seq<StockMarketData>
+}
