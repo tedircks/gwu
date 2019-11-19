@@ -5,20 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="Trader.fs" />
+    <Compile Include="API.fs" />
     <None Include="Runner.fsx" />
-    <Compile Include="Library.fs" />
+    <Compile Include="Plotter.fs" />
   </ItemGroup>
 
-  <ItemGroup />
-
   <ItemGroup>
+    <PackageReference Include="Deedle" Version="2.1.0" />
+    <PackageReference Include="FSharp.Data" Version="3.3.2" />
     <PackageReference Include="XPlot.Plotly" Version="3.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BackTester.Shared\BackTester.Shared.fsproj" />
-    <ProjectReference Include="..\BackTester.Trader\BackTester.Trader.fsproj" />
-    <ProjectReference Include="..\BackTester.ZAPI\BackTester.ZAPI.fsproj" />
   </ItemGroup>
 
 </Project>

@@ -2,10 +2,7 @@
 #r @"C:\Users\dircks\.nuget\packages\xplot.plotly\3.0.1\lib\netstandard2.0\XPlot.Plotly.dll"
 #r @"C:\Users\dircks\.nuget\packages\deedle\2.1.0\lib\netstandard2.0\Deedle.dll"
 #r @"C:\Users\dircks\.nuget\packages\fsharp.data\3.3.2\lib\netstandard2.0\FSharp.Data.dll"
-#r @"\\Mac\Home\Documents\GitHub\gwu\BackTester.Final\BackTester.Shared\bin\Debug\netstandard2.0\BackTester.Shared.dll"
-#r @"\\Mac\Home\Documents\GitHub\gwu\BackTester.Final\BackTester.ZPlotter\bin\Debug\netstandard2.0\BackTester.Trader.dll"
 #r @"\\Mac\Home\Documents\GitHub\gwu\BackTester.Final\BackTester.ZPlotter\bin\Debug\netstandard2.0\BackTester.ZPlotter.dll"
-#r @"\\Mac\Home\Documents\GitHub\gwu\BackTester.Final\BackTester.ZPlotter\bin\Debug\netstandard2.0\BackTester.ZAPI.dll"
 
 open BackTester.Shared
 open BackTester.ZAPI.API
@@ -13,7 +10,7 @@ open BackTester.ZPlotter
 open BackTester.Trader
 
 let STOCK = "GOOGL"
-let MOVING_AVERAGE_LOW = 100
+let MOVING_AVERAGE_LOW = 50
 let MOVING_AVERAGE_HIGH = 200
 let NUM_STOCKS_TO_TRADE_WHEN_HOLDING = 200
 let NUM_STOCKS_TO_TRADE_WHEN_EMPTY = 100
