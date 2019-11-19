@@ -1,3 +1,3 @@
-# gwu
+# F# Equity Trading Testing
 
 test
